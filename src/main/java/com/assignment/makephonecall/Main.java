@@ -1,11 +1,7 @@
 package com.assignment.makephonecall;
 
 import com.twilio.Twilio;
-import com.twilio.base.ResourceSet;
 import com.twilio.rest.api.v2010.account.Call;
-import com.twilio.rest.voice.v1.dialingpermissions.Country;
-import com.twilio.rest.voice.v1.dialingpermissions.Settings;
-import com.twilio.rest.voice.v1.dialingpermissions.country.HighriskSpecialPrefix;
 import com.twilio.type.PhoneNumber;
 
 import java.net.URI;
