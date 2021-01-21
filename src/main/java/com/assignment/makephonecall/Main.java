@@ -1,4 +1,4 @@
-package com.assignment;
+package com.assignment.makephonecall;
 
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Call;
@@ -17,8 +17,10 @@ public class Main {
         String from = "+12013409432";
         String to = "+37255618061";
 
-        Call call = Call.creator(new PhoneNumber(to), new PhoneNumber(from),
-                new URI("http://demo.twilio.com/docs/voice.xml*")).create();
+        Call call = Call.creator(
+                new PhoneNumber(to),
+                new PhoneNumber(from),
+                new URI("http://demo.twilio.com/docs/voice.xml")).create();
         // printing account SID to confirm, that phone call succeeded
         System.out.println(call.getAccountSid());
     }
