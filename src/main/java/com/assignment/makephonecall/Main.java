@@ -1,7 +1,11 @@
 package com.assignment.makephonecall;
 
 import com.twilio.Twilio;
+import com.twilio.base.ResourceSet;
 import com.twilio.rest.api.v2010.account.Call;
+import com.twilio.rest.voice.v1.dialingpermissions.Country;
+import com.twilio.rest.voice.v1.dialingpermissions.Settings;
+import com.twilio.rest.voice.v1.dialingpermissions.country.HighriskSpecialPrefix;
 import com.twilio.type.PhoneNumber;
 
 import java.net.URI;
@@ -22,8 +26,10 @@ public class Main {
                     new PhoneNumber(from),
                     URI.create("http://demo.twilio.com/docs/voice.xml")).create();
             // printing call status and SID to confirm that phone call succeeded
+
             System.out.printf("Status: %s\nAccount SID: %s\n",
                     call.getStatus(), call.getSid());
+
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
