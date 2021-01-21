@@ -1,7 +1,7 @@
 package com.assignment.respondtophonecall;
 
+import com.twilio.twiml.Say;
 import com.twilio.twiml.VoiceResponse;
-import com.twilio.twiml.voice.Say;
 
 import static spark.Spark.*;
 
@@ -16,7 +16,7 @@ public class VoiceApp {
             VoiceResponse voiceResponse = new VoiceResponse.Builder()
                     .say(say)
                     .build();
-            
+
             return voiceResponse.toXml();
         });
     }
