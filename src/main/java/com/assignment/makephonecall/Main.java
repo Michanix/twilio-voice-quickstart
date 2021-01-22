@@ -22,7 +22,7 @@ public class Main {
                     new PhoneNumber(from),
                     URI.create("http://demo.twilio.com/docs/voice.xml")).create();
             // printing call status and SID to confirm that phone call succeeded
-            System.out.printf("Status: %s\nAccount SID: %s\n",
+            System.out.printf("Status: %s\nCall SID: %s\n",
                     call.getStatus(), call.getSid());
 
         } catch (Exception ex) {
