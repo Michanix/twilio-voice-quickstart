@@ -13,7 +13,7 @@ public class Main {
 
         // Phone numbers should be in E.164 format
         // more info: https://www.twilio.com/docs/glossary/what-e164
-        String from = "+12013409432";
+        String from = "+1 201 340 9432";
         String to   = credentials.getMY_PHONE_NUMBER();
 
         try {
@@ -22,7 +22,6 @@ public class Main {
                     new PhoneNumber(from),
                     URI.create("http://demo.twilio.com/docs/voice.xml")).create();
             // printing call status and SID to confirm that phone call succeeded
-
             System.out.printf("Status: %s\nAccount SID: %s\n",
                     call.getStatus(), call.getSid());
 
